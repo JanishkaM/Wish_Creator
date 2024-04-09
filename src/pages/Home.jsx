@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <div className="container mx-auto">
       <header>
-        <h2>Welcome to doxDesigner Wish Creator</h2>
+        <h2 className="text-4xl font-bold text-center text-blue-600 mt-10">Welcome to doxDesigner Wish Creator</h2>
       </header>
 
       <div className="grid grid-cols-1 md:grid-cols-2 mt-20">
