@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../assets/css/wish-card.css";
 import { toPng } from "html-to-image";
 import download from "downloadjs";
-
+import Hero from "../components/Hero";
 export default function Home() {
   const [title, setTitle] = useState("");
   const [name, setName] = useState("");
@@ -29,12 +29,10 @@ export default function Home() {
   }
 
   return (
-    <div className="container mx-auto">
-      <header>
-        <h2 className="text-4xl font-bold text-center text-blue-600 mt-10">Welcome to doxDesigner Wish Creator</h2>
-      </header>
+    <main>
+      <Hero />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 mt-20">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 mt-20">
         <div className="flex flex-col items-center md:items-start px-5">
           <label htmlFor="title" className="w-full mb-4 font-semibold">
             Type Your Wish
@@ -79,7 +77,7 @@ export default function Home() {
         <div>
           <div className="canvas-holder border-2 border-blue-200">
             <div className="wish-card renderd-card" id="wish-card-elm">
-              <h2>{title}</h2>
+              <h2 className="bg-black/60">{title}</h2>
               <div
                 className={
                   name || toName
@@ -94,6 +92,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
