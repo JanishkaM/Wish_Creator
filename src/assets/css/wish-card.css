@@ -6,6 +6,10 @@
   position: relative;
   aspect-ratio: 16/9;
   overflow: hidden;
+
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover; 
 }
 .wish-card h2 {
   position: absolute;
