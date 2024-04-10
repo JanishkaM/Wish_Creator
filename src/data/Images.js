@@ -6,7 +6,7 @@ const Images = [];
 // Iterate over the ImageFileNames array
 ImageFileNames.forEach((filename) => {
     // Construct the URL for each image
-    const imageUrl = `src/assets/images/${filename}.png`;
+    const imageUrl = `assets/images/${filename}.png`;
 
     // Push an object with the required properties to the Images array
     Images.push({

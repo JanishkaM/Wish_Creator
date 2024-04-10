@@ -24,7 +24,7 @@ export default function Carousel({ handleImageSelect }) {
             <button onClick={() => handleImageSelect(image.url)}>
               <img
                 className="w-full h-full aspect-video object-contain rounded-md block"
-                src={image.url}
+                src={`src/${image.url}`}
                 alt={image.alt}                
               />
             </button>

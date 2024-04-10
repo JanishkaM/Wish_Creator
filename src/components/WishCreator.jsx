@@ -49,7 +49,7 @@ export default function WishCreator({handleDownload, handleInputName, handleInpu
       </div>
       <div>
         <div className="canvas-holder border-2 border-blue-200">
-          <div className="wish-card renderd-card" id="wish-card-elm" style={imageUrl ? {backgroundImage: `url(${imageUrl})`} : {backgroundImage: `url(${imageUrl})`}}>
+          <div className="wish-card renderd-card" id="wish-card-elm" style={imageUrl ? {backgroundImage: `url(src/${imageUrl})`} : {backgroundImage: `url(${imageUrl})`}}>
             <h2 className="bg-black/60">{title}</h2>
             <div
               className={
