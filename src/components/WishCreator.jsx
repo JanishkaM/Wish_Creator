@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-
+import { getImageUrl } from "../utils/image-util";
 export default function WishCreator({handleDownload, handleInputName, handleInputTitle, handleInputToName, name, title, toName, imageUrl},) {
   return (
     <div
@@ -49,7 +49,7 @@ export default function WishCreator({handleDownload, handleInputName, handleInpu
       </div>
       <div>
         <div className="canvas-holder border-2 border-blue-200">
-          <div className="wish-card renderd-card" id="wish-card-elm" style={imageUrl ? {backgroundImage: `url(src/${imageUrl})`} : {backgroundImage: `url(${imageUrl})`}}>
+          <div className="wish-card renderd-card" id="wish-card-elm" style={imageUrl ? {backgroundImage: `url(${getImageUrl(imageUrl)})`} : {backgroundImage: `black`}}>
             <h2 className="bg-black/60">{title}</h2>
             <div
               className={

@@ -2,6 +2,7 @@ import Images from "../data/Images";
 import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
+import { getImageUrl } from "../utils/image-util";
 
 export default function Carousel({ handleImageSelect }) {
   const [width, setWidth] = useState(0);
@@ -24,7 +25,7 @@ export default function Carousel({ handleImageSelect }) {
             <button onClick={() => handleImageSelect(image.url)}>
               <img
                 className="w-full h-full aspect-video object-contain rounded-md block"
-                src={`src/${image.url}`}
+                src={getImageUrl(image.url)}
                 alt={image.alt}                
               />
             </button>
