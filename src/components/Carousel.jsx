@@ -15,6 +15,7 @@ export default function Carousel({ handleImageSelect }) {
 
   return (
     <motion.div ref={carousel} className="container mx-auto overflow-hidden">
+      <h2 className="text-2xl text-center uppercase font-bold py-5">Select Your BackGround Image</h2>
       <motion.div
         className="flex"
         drag="x"

@@ -14,6 +14,8 @@ export default function Home() {
   const [toName, setToName] = useState("");
   const [imageUrl, setImageUrl] = useState("");
 
+  const [titleFontSize, setTitleFontSize] = useState(30);
+  const [brightness, setBrightness] = useState(50);
 
   const wishCard = document.querySelector("#wish-card-elm");
 
@@ -40,6 +42,16 @@ export default function Home() {
     setImageUrl(imageUrl)
   }
 
+  function handleTitleFontSize(e){
+    setTitleFontSize(e.target.value)
+    // console.log(title)
+  }
+
+  function handleBrightness(e){
+    setBrightness(e.target.value)
+    // console.log(brightness)
+  }
+
 
 
 
@@ -53,10 +65,14 @@ export default function Home() {
         name={name} 
         toName={toName}
         imageUrl={imageUrl}
+        brightness={brightness}
+        titleFontSize={titleFontSize}
         handleDownload={handleDownload}
         handleInputName={handleInputName}
         handleInputTitle={handleInputTitle}
         handleInputToName={handleInputToName}
+        handleBrightness={handleBrightness}
+        handleTitleFontSize={handleTitleFontSize}
       />
 
       <Footer />
