@@ -1,7 +1,6 @@
 import { useState } from "react";
-
+import Logo from "../assets/icons/logo.png";
 export default function Nav() {
-
   const [isOpen, setIsOpen] = useState(false);
 
   function handleNavOpen() {
@@ -11,37 +10,51 @@ export default function Nav() {
     <header className="bg-blue-500/90 sticky top-0 z-50">
       <nav className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
-          <div className="text-white uppercase font-extrabold text-3xl">
-            <a href="#">Wish Creator</a>
-          </div>
+          <img src={Logo} alt="Wish Maker" className="max-w-64 h-auto" />
+
           <div className="hidden md:block">
             <ul className="flex items-center space-x-8">
               <li>
-                <a href="#" className="text-white hover:text-blue-950 font-semibold text-md">
+                <a
+                  href="#"
+                  className="text-white hover:text-blue-950 font-semibold text-md"
+                >
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white hover:text-blue-950 font-semibold text-md">
+                <a
+                  href="#"
+                  className="text-white hover:text-blue-950 font-semibold text-md"
+                >
                   About
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white hover:text-blue-950 font-semibold text-md">
+                <a
+                  href="#"
+                  className="text-white hover:text-blue-950 font-semibold text-md"
+                >
                   Services
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white hover:text-blue-950 font-semibold text-md">
+                <a
+                  href="#"
+                  className="text-white hover:text-blue-950 font-semibold text-md"
+                >
                   Contact
                 </a>
               </li>
             </ul>
           </div>
           <div className="md:hidden">
-            <button className="outline-none mobile-menu-button" onClick={handleNavOpen}>
+            <button
+              className="outline-none mobile-menu-button"
+              onClick={handleNavOpen}
+            >
               <svg
-                className="w-8 h-8 text-white"                
+                className="w-8 h-8 text-white"
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -54,7 +67,11 @@ export default function Nav() {
             </button>
           </div>
         </div>
-        <div className={isOpen ? "mobile-menu md:hidden" : "mobile-menu hidden md:hidden"}>
+        <div
+          className={
+            isOpen ? "mobile-menu md:hidden" : "mobile-menu hidden md:hidden"
+          }
+        >
           <ul className="my-6 space-y-5">
             <li>
               <a

@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 import { getImageUrl } from "../utils/image-util";
+import { HexColorPicker } from "react-colorful";
+
 export default function WishCreator({
   handleDownload,
   handleInputName,
@@ -7,21 +9,25 @@ export default function WishCreator({
   handleInputToName,
   handleBrightness,
   handleTitleFontSize,
+  setTitleColor,
+  handleTitleAlign,
+  handleNamesFontSize,
   name,
   title,
   toName,
   imageUrl,
   titleFontSize,
   brightness,
+  titleColor,
+  titleAlign,
+  namesFontSize,
 }) {
-
   return (
     <div
-      className="container mx-auto grid grid-cols-1 md:grid-cols-2 pt-32"
-      id="wish-creator-container"
+      className="container mx-auto grid grid-cols-1 md:grid-cols-2 pt-16"      
     >
       {/* Wish Card Settings */}
-      <div className="md:pb-0 pb-12">
+      <div className="md:pb-0 pb-12 order-2">
         <div className="flex flex-col items-center md:items-start px-5">
           <h2 className="text-2xl font-bold mb-5">
             Add your Wish And Your Name
@@ -66,12 +72,59 @@ export default function WishCreator({
             Download Wish Card
           </button>
         </div>
-        <div className="px-5 md:mb-10">
+        <div className="px-5 md:mb-10 order-1">
           <h2 className="text-2xl font-bold mt-12 mb-5">Other Text Settings</h2>
-          <label htmlFor="fontSize" className="w-full mb-4 font-semibold">
-            Font Size
-            <input className="w-full mt-2" type="range" name="fontSize" id="fontSize" max={60} min={5} step={1} defaultValue={30} onChange={handleTitleFontSize}/>
+          <label htmlFor="fontSize" className="w-full font-semibold">
+            Title Font Size
+            <input
+              className="w-full mt-2"
+              type="range"
+              name="fontSize"
+              id="fontSize"
+              max={60}
+              min={5}
+              step={1}
+              defaultValue={titleFontSize}
+              onChange={handleTitleFontSize}
+            />
           </label>
+          <label htmlFor="namesFontSize" className="w-full font-semibold">
+            Names Font Size
+            <input
+              className="w-full mt-2"
+              type="range"
+              name="namesFontSize"
+              id="namesFontSize"
+              max={20}
+              min={9}
+              step={1}
+              defaultValue={namesFontSize}
+              onChange={handleNamesFontSize}
+            />
+          </label>
+          <div className="grid grid-cols-2">
+            <label htmlFor="titleColor" className="w-full font-semibold">
+              Title Font Colour
+              <HexColorPicker
+                className="mt-3"
+                color={titleColor}
+                onChange={setTitleColor}
+              />
+            </label>
+            <label htmlFor="titleAlign" className="font-semibold">
+              Title Align
+              <select
+                name="titleAlign"
+                id="titleAlign"
+                onChange={handleTitleAlign}
+                className="w-full mt-3"
+              > 
+                <option value="center" selected={titleAlign == 'center' ? 'selected' : ""}>Center</option>
+                <option value="left" selected={titleAlign == 'left' ? 'selected' : ""}>Left</option>
+                <option value="right" selected={titleAlign == 'right' ? 'selected' : ""}>Right</option>
+              </select>
+            </label>
+          </div>
         </div>
       </div>
 
@@ -98,7 +151,7 @@ export default function WishCreator({
             >
               <h2
                 className={`p-4 font-bold capitalize left-1/2 top-1/2 text-center absolute w-full h-full translate-x-[-50%] translate-y-[-50%] text-white`}
-                style={{ fontSize: `${titleFontSize}px`}}
+                style={{ fontSize: `${titleFontSize}px`, color: titleColor, textAlign: titleAlign}}
               >
                 {title}
               </h2>
@@ -109,8 +162,8 @@ export default function WishCreator({
                     : ""
                 }
               >
-                <p className="from">{name ? `From: ${name}` : ""}</p>
-                <p className="to">{toName ? `To: ${toName}` : ""}</p>
+                <p className="from" style={{ fontSize:`${namesFontSize}px` }}>{name ? `From: ${name}` : ""}</p>
+                <p className="to" style={{ fontSize:`${namesFontSize}px` }}>{toName ? `To: ${toName}` : ""}</p>
               </div>
             </div>
           </div>
@@ -142,10 +195,16 @@ WishCreator.propTypes = {
   handleInputToName: PropTypes.func.isRequired,
   handleBrightness: PropTypes.func.isRequired,
   handleTitleFontSize: PropTypes.func.isRequired,
+  setTitleColor: PropTypes.func.isRequired,
+  handleTitleAlign: PropTypes.func.isRequired,
+  handleNamesFontSize: PropTypes.func.isRequired,
   name: PropTypes.string,
   title: PropTypes.string,
   toName: PropTypes.string,
   imageUrl: PropTypes.string,
   brightness: PropTypes.number,
   titleFontSize: PropTypes.number,
+  titleColor: PropTypes.string,
+  titleAlign: PropTypes.string,
+  namesFontSize: PropTypes.number,
 };

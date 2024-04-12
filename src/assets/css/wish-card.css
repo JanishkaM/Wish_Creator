@@ -6,7 +6,6 @@
   right: 0;
   color: aliceblue;
   font-weight: 400;
-  font-size: clamp(.9rem, 2vw, 1rem);
 }
 .wish-card .to {
   text-transform: capitalize;
@@ -15,5 +14,4 @@
   right: 0;
   color: aliceblue;
   font-weight: 400;
-  font-size: clamp(.9rem, 2vw, 1rem);
 }

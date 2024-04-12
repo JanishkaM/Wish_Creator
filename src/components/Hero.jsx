@@ -17,7 +17,7 @@ export default function Hero() {
             </p>
 
             <div className="mt-5 max-w-2xl">
-              <h1 className="block font-semibold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-gray-200">
+              <h1 className="block font-semibold uppercase text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-gray-200">
                 Easy Healpfull Wish Creator
               </h1>
             </div>

@@ -14,7 +14,12 @@ export default function Home() {
   const [toName, setToName] = useState("");
   const [imageUrl, setImageUrl] = useState("");
 
+  const [titleColor, setTitleColor] = useState("#ffffff");
   const [titleFontSize, setTitleFontSize] = useState(30);
+  const [titleAlign, setTitleAlign] = useState("center");
+
+  const [namesFontSize, setNamesFontSize] = useState(10);
+
   const [brightness, setBrightness] = useState(50);
 
   const wishCard = document.querySelector("#wish-card-elm");
@@ -37,42 +42,53 @@ export default function Home() {
     });
   }
 
-  function handleImageSelect(imageUrl){
+  function handleImageSelect(imageUrl) {
     // console.log(imageUrl)
-    setImageUrl(imageUrl)
+    setImageUrl(imageUrl);
   }
 
-  function handleTitleFontSize(e){
-    setTitleFontSize(e.target.value)
+  function handleTitleFontSize(e) {
+    setTitleFontSize(e.target.value);
     // console.log(title)
   }
 
-  function handleBrightness(e){
-    setBrightness(e.target.value)
+  function handleBrightness(e) {
+    setBrightness(e.target.value);
     // console.log(brightness)
   }
 
+  function handleTitleAlign(e) {
+    setTitleAlign(e.target.value);
+  }
 
-
+  function handleNamesFontSize(e) {
+    setNamesFontSize(e.target.value);
+  }
 
   return (
     <main>
       <Nav />
       <Hero />
-      <Carousel handleImageSelect={handleImageSelect}/>
+      <Carousel handleImageSelect={handleImageSelect} imageUrl={imageUrl}/>
       <WishCreator
         title={title}
-        name={name} 
+        name={name}
         toName={toName}
         imageUrl={imageUrl}
         brightness={brightness}
         titleFontSize={titleFontSize}
+        titleColor={titleColor}
+        titleAlign={titleAlign}
+        namesFontSize={namesFontSize}
         handleDownload={handleDownload}
         handleInputName={handleInputName}
         handleInputTitle={handleInputTitle}
         handleInputToName={handleInputToName}
         handleBrightness={handleBrightness}
         handleTitleFontSize={handleTitleFontSize}
+        setTitleColor={setTitleColor}
+        handleTitleAlign={handleTitleAlign}
+        handleNamesFontSize={handleNamesFontSize}
       />
 
       <Footer />
