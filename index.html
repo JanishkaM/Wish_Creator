@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="author" content="Janishka Madushan | doxDesigner">
+    <meta name="author" content="Janishka Madushan | doxDesigner" />
 
     <meta
       property="og:title"
@@ -15,7 +15,6 @@
     <meta property="og:image" content="/flyer.png" />
     <meta property="og:url" content="https://wish-creator.netlify.app/" />
     <meta property="og:type" content="website" />
-
 
     <link rel="icon" type="image/png" href="/icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,6 +32,33 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <form name="sendMessageForm" netlify hidden>
+      <div>
+        <label for="rating">Rating:</label>
+        <input type="range" id="rating" name="rating" min="1" max="5" />
+      </div>
+      <div>
+        <label for="review">Review:</label>
+        <textarea id="review" name="review" rows="3"></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-X7JW4JQT9X"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-X7JW4JQT9X");
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
