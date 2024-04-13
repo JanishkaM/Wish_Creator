@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 import Logo from "../assets/icons/logo.png";
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,21 +16,19 @@ export default function Nav() {
 
           <div className="hidden md:block">
             <ul className="flex items-center space-x-8">
+              <Link
+                to="/"
+                className="text-white hover:text-blue-950 font-semibold text-md"
+              >
+                Home
+              </Link>
               <li>
-                <a
-                  href="/"
-                  className="text-white hover:text-blue-950 font-semibold text-md"
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/send-message"
+                <Link
+                  to="/send-message"
                   className="text-white hover:text-blue-950 font-semibold text-md"
                 >
                   Send Message
-                </a>
+                </Link>
               </li>
               <li>
                 <a
@@ -76,21 +76,19 @@ export default function Nav() {
         >
           <ul className="my-6 space-y-5">
             <li>
-              <a
-                href="/"
+              <Link
+                to="/"
                 className="block px-4 py-3 text-white bg-blue-500/40 hover:bg-blue-600/90 rounded"
               >
                 Home
-              </a>
+              </Link>
             </li>
-            <li>
-              <a
-                href="/send-message"
-                className="block px-4 py-3 text-white bg-blue-500/40 hover:bg-blue-600/90 rounded"
-              >
-                Send Message
-              </a>
-            </li>
+            <Link
+              to="/send-message"
+              className="block px-4 py-3 text-white bg-blue-500/40 hover:bg-blue-600/90 rounded"
+            >
+              Send Message
+            </Link>
             <li>
               <a
                 href="https://www.facebook.com/people/DoxDesigner/61556561968928/"
