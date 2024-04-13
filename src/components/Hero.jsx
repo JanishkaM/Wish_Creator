@@ -24,7 +24,7 @@ export default function Hero() {
 
             <div className="mt-5 max-w-3xl">
               <p className="text-lg text-gray-600 dark:text-gray-400">
-                This healpfull web app for doxDesigner facebook page
+              Craft personalized and shareable wish cards effortlessly with Wish Creator. Express your heartfelt sentiments on special occasions, birthdays, and holidays. Start spreading joy today at Wish-creator
               </p>
             </div>
 

@@ -9,6 +9,7 @@ import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import Carousel from "../components/Carousel";
 import WishCreator from "../components/WishCreator";
+import Ads from "../components/Ads";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -102,7 +103,7 @@ export default function Home() {
         handleTitleAlign={handleTitleAlign}
         handleNamesFontSize={handleNamesFontSize}
       />
-
+      <Ads />
       <Footer />
     </main>
   );
