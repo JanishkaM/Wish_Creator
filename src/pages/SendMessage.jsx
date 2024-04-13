@@ -8,7 +8,7 @@ export default function SendMessage() {
       <div className="container p-5 grid grid-cols-1 md:grid-cols-2 mx-auto mt-8">
         <div className="div">
           <h2 className="text-2xl font-bold mb-4">Leave a Review</h2>
-          <form className="space-y-4">
+          <form name="sendMessageForm" method="post" className="space-y-4">
             <input type="hidden" name="form-name" value="sendMessageForm" />
             <div>
               <label
