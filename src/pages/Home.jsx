@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
+
 import "../assets/css/wish-card.css";
 import { toPng } from "html-to-image";
 import download from "downloadjs";
@@ -9,6 +11,9 @@ import Carousel from "../components/Carousel";
 import WishCreator from "../components/WishCreator";
 
 export default function Home() {
+  const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
+
   const [title, setTitle] = useState("");
   const [name, setName] = useState("");
   const [toName, setToName] = useState("");
@@ -35,12 +40,19 @@ export default function Home() {
     setToName(e.target.value);
   }
   // console.log(title)
-  function handleDownload() {
-    toPng(wishCard).then((dataUrl) => {
-      console.log(dataUrl);
+  const handleDownload = async () => {
+    setIsLoading(true); // Set loading state to true when starting the download process
+    try {
+      const dataUrl = await toPng(wishCard);
       download(dataUrl, "wish-card.png");
-    });
-  }
+      navigate('/send-message');
+    } catch (error) {
+      console.error('Error downloading wish card:', error);
+      // Handle the error, e.g., show a message to the user
+    } finally {
+      setIsLoading(false); // Set loading state back to false when download process is complete
+    }
+  };
 
   function handleImageSelect(imageUrl) {
     // console.log(imageUrl)
@@ -66,7 +78,7 @@ export default function Home() {
   }
 
   return (
-    <main>
+    <main className={isLoading ? 'dimmed' : ''}>
       <Nav />
       <Hero />
       <Carousel handleImageSelect={handleImageSelect} imageUrl={imageUrl}/>

@@ -16,7 +16,7 @@ export default function Nav() {
             <ul className="flex items-center space-x-8">
               <li>
                 <a
-                  href="#"
+                  href="/"
                   className="text-white hover:text-blue-950 font-semibold text-md"
                 >
                   Home
@@ -24,26 +24,28 @@ export default function Nav() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/send-message"
                   className="text-white hover:text-blue-950 font-semibold text-md"
                 >
-                  About
+                  Send Message
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://www.facebook.com/people/DoxDesigner/61556561968928/"
                   className="text-white hover:text-blue-950 font-semibold text-md"
+                  target="_blank"
                 >
-                  Services
+                  Our Services
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://www.facebook.com/people/DoxDesigner/61556561968928/"
                   className="text-white hover:text-blue-950 font-semibold text-md"
+                  target="_blank"
                 >
-                  Contact
+                  Our Facebook
                 </a>
               </li>
             </ul>
@@ -75,7 +77,7 @@ export default function Nav() {
           <ul className="my-6 space-y-5">
             <li>
               <a
-                href="#"
+                href="/"
                 className="block px-4 py-3 text-white bg-blue-500/40 hover:bg-blue-600/90 rounded"
               >
                 Home
@@ -83,26 +85,28 @@ export default function Nav() {
             </li>
             <li>
               <a
-                href="#"
+                href="/send-message"
                 className="block px-4 py-3 text-white bg-blue-500/40 hover:bg-blue-600/90 rounded"
               >
-                About
+                Send Message
               </a>
             </li>
             <li>
               <a
-                href="#"
+                href="https://www.facebook.com/people/DoxDesigner/61556561968928/"
                 className="block px-4 py-3 text-white bg-blue-500/40 hover:bg-blue-600/90 rounded"
+                target="_blank"
               >
                 Services
               </a>
             </li>
             <li>
               <a
-                href="#"
+                href="https://www.facebook.com/people/DoxDesigner/61556561968928/"
                 className="block px-4 py-3 text-white bg-blue-500/40 hover:bg-blue-600/90 rounded"
+                target="_blank"
               >
-                Contact
+                Like Our Facebook Page
               </a>
             </li>
           </ul>

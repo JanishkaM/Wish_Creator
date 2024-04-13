@@ -6,3 +6,16 @@ body{
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
 }
+main {
+  transition: opacity 0.5s ease; /* Smooth transition for opacity change */
+}
+
+@keyframes dimAnimation {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 0.8; }
+}
+
+.dimmed {
+  animation: dimAnimation 2s infinite alternate; /* Apply animation when isLoading is true */
+}

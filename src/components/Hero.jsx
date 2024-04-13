@@ -49,6 +49,14 @@ export default function Hero() {
                   <path d="m9 18 6-6-6-6" />
                 </svg>
               </a>
+              <a
+                className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-black text-white hover:bg-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                href="#wish-creator-container"
+              >
+                <i className="bi bi-facebook"></i>
+                Follow
+                
+              </a>
             </div>
           </div>
         </div>
