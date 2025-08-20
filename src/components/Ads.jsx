@@ -11,8 +11,6 @@ export default function Ads() {
         <div className="m-5 hover:scale-105 transition-all">
           <iframe
             src="https://www.facebook.com/share/p/16yFX6jsaf/?mibextid=wwXIfr"
-            width="500"
-            height="660"
             style={{ border: "none", overflow: "hidden" }}
             allowFullScreen={true}
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
@@ -21,8 +19,6 @@ export default function Ads() {
         <div className="m-5 hover:scale-105 transition-all">
           <iframe
             src="https://www.facebook.com/share/p/19VvezUYnf/?mibextid=wwXIfr"
-            width="500"
-            height="660"
             style={{ border: "none", overflow: "hidden" }}
             allowFullScreen={true}
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
