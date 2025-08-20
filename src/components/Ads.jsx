@@ -10,7 +10,7 @@ export default function Ads() {
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="m-5 hover:scale-105 transition-all">
           <iframe
-            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02CdvqiJwaVmFuhndXqhQSF4DRxfWWG2XgmYARP4GsgCoiokV8jMacwsggJJBQs4tWl%26id%3D61556561968928&show_text=true&width=500"
+            src="https://www.facebook.com/share/p/16yFX6jsaf/?mibextid=wwXIfr"
             width="500"
             height="660"
             style={{ border: "none", overflow: "hidden" }}
@@ -20,7 +20,7 @@ export default function Ads() {
         </div>
         <div className="m-5 hover:scale-105 transition-all">
           <iframe
-            src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02hV8ufPEe3fyaaUiBn434WeyrPyWX5LQA2zEjGWmCaEEWPcG79xB2HExjugk95DZol%26id%3D61556561968928&show_text=true&width=500"
+            src="https://www.facebook.com/share/p/19VvezUYnf/?mibextid=wwXIfr"
             width="500"
             height="660"
             style={{ border: "none", overflow: "hidden" }}
